@@ -1,0 +1,156 @@
+{
+  "stream": "CSE - Artificial Intelligence",
+  "batch": "2024",
+  "totalCourses": 37,
+  "courses": [
+    {
+      "code": "UBA01",
+      "name": "Engineering Mathematics - I"
+    },
+    {
+      "code": "UBA04",
+      "name": "Discrete Mathematics"
+    },
+    {
+        "code":"UBA53",
+        "name":"Probabilistic Methods and Linear Algebra"
+    },
+    {
+        "code":"UBA28",
+        "name":"Professional Ethics and Legal Practices"
+    },
+    {
+        "code":"UBA48",
+        "name":"Engineering Physics"
+    },
+    {
+        "code":"UBA49",
+        "name":"Engineering Chemistry"
+    },
+    {
+        "code":"UBA29",
+        "name":"Technical English"
+    },
+    {
+        "code":"UBA10",
+        "name":"Numerical Methods"
+    },
+    
+{
+  "code": "UBA06",
+  "name": "Applied Mathematics"
+},
+{
+  "code": "BTA01",
+  "name": "Biology and Environmental Science for Engineers"
+},
+{
+  "code": "EEA01",
+  "name": "Basic Electrical and Electronics Engineering"
+},
+{
+  "code": "ECA47",
+  "name": "Principles of Digital System Design"
+},
+{
+  "code": "CSA02",
+  "name": "C Programming"
+},
+{
+  "code": "CSA03",
+  "name": "Data Structures"
+},
+{
+  "code": "CSA04",
+  "name": "Operating Systems"
+},
+{
+  "code": "CSA05",
+  "name": "Database Management Systems"
+},
+{
+  "code": "CSA07",
+  "name": "Computer Networks"
+},
+{
+  "code": "CSA08",
+  "name": "Python Programming"
+},
+{
+  "code": "CSA12",
+  "name": "Computer Architecture"
+},
+{
+  "code": "CSA15",
+  "name": "Cloud computing and Big Data Analytics"
+},
+{
+  "code": "CSA16",
+  "name": "Data warehousing and Data Mining"
+},
+{
+  "code": "CSA17",
+  "name": "Artificial Intelligence"
+},
+{
+  "code": "CSA06",
+  "name": "Design and Analysis of Algorithms"
+},
+{
+  "code": "CSA09",
+  "name": "Programming in Java"
+},
+{
+  "code": "CSA10",
+  "name": "Software Engineering"
+},
+{
+  "code": "ITA05",
+  "name": "Computer Vision"
+},
+{
+  "code": "CSA65",
+  "name": "Generative AI and Large-Scale Models"
+},
+{
+  "code": "DSA03",
+  "name": "Natural Language Processing"
+},
+{
+  "code": "DSA04",
+  "name": "Fundamentals of Data Science"
+},
+{
+  "code": "MLA03",
+  "name": "Reinforcement Learning"
+},
+{
+  "code": "DSA01",
+  "name": "Object Oriented Programming using C++"
+},
+{
+  "code": "ECA14",
+  "name": "Embedded Systems"
+},
+{
+  "code": "SPIC7",
+  "name": "Product Design and Development"
+},
+{
+  "code": "SPIC4",
+  "name": "Research Project"
+},
+{
+  "code": "SPIC5",
+  "name": "Industrial Internship - I"
+},
+{
+  "code": "SPIC6",
+  "name": "Industrial Internship - II"
+},
+{
+  "code": "SPIC9",
+  "name": "Professional Certification"
+}
+  ]
+}

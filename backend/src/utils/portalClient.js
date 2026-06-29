@@ -12,11 +12,16 @@ class PortalClient {
         baseURL: "https://arms.sse.saveetha.com",
         jar: this.jar,
         withCredentials: true,
+        headers: {
+          "User-Agent": "Mozilla/5.0",
+        },
       })
     );
   }
 
-  // Step 1: Fetch Login Page
+  // -------------------------------
+  // Step 1 : Fetch Login Page
+  // -------------------------------
   async getLoginPage() {
     console.log("📄 Fetching Login Page...");
 
@@ -25,22 +30,26 @@ class PortalClient {
     return response.data;
   }
 
-  // Step 2: Extract ASP.NET Hidden Fields
+  // -------------------------------
+  // Step 2 : Extract ASP.NET Fields
+  // -------------------------------
   extractHiddenFields(html) {
     console.log("🔍 Extracting Hidden Fields...");
 
     const $ = cheerio.load(html);
 
     return {
-      viewState: $("#__VIEWSTATE").val(),
-      eventValidation: $("#__EVENTVALIDATION").val(),
-      viewStateGenerator: $("#__VIEWSTATEGENERATOR").val(),
+      viewState: $("#__VIEWSTATE").val() || "",
+      eventValidation: $("#__EVENTVALIDATION").val() || "",
+      viewStateGenerator: $("#__VIEWSTATEGENERATOR").val() || "",
     };
   }
 
-  // Step 3: Submit Login Form
+  // -------------------------------
+  // Step 3 : Submit Login
+  // -------------------------------
   async submitLogin(username, password, fields) {
-    console.log("🚀 Submitting Login...");
+    console.log("🚀 Logging into Portal...");
 
     const params = new URLSearchParams();
 
@@ -62,12 +71,12 @@ class PortalClient {
       }
     );
 
-    console.log("✅ Login Response:", response.status);
-
     return response;
   }
 
-  // Main Login Method
+  // -------------------------------
+  // Step 4 : Login
+  // -------------------------------
   async login(username, password) {
     const html = await this.getLoginPage();
 
@@ -79,7 +88,47 @@ class PortalClient {
       fields
     );
 
-    return response;
+    if (response.status !== 200) {
+      throw new Error("Login request failed.");
+    }
+
+    /*
+      Later we'll improve this further by checking
+      whether the returned HTML still contains Login.aspx.
+      That will tell us if the credentials were wrong.
+    */
+
+    console.log("✅ Login Successful");
+
+    return true;
+  }
+
+  // -------------------------------
+  // Step 5 : Fetch Results
+  // -------------------------------
+  async getResults() {
+    console.log("📚 Fetching Student Results...");
+
+    const response = await this.client.get(
+      "/Handler/Student.ashx",
+      {
+        params: {
+          Page: "CourseEnroll",
+          Mode: "GetResult",
+          Id: 0,
+        },
+      }
+    );
+
+    if (!response.data || !response.data.Table) {
+      throw new Error("Unable to fetch results.");
+    }
+
+    console.log(
+      `✅ ${response.data.Table.length} courses retrieved`
+    );
+
+    return response.data.Table;
   }
 }
 
