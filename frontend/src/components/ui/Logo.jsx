@@ -20,7 +20,7 @@ export default function Logo({ size = "default" }) {
           from-indigo-500
           via-violet-500
           to-purple-600
-          shadow-lg shadow-indigo-500/30
+          shadow-[0_0_30px_rgba(99,102,241,0.5)]
         "
       >
         <GraduationCap className={`${iconSize} text-white`} />

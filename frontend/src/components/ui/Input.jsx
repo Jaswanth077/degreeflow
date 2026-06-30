@@ -6,8 +6,8 @@ export default function Input({
   ...props
 }) {
   return (
-    <div className="space-y-2">
-      <label className="text-sm font-medium text-slate-300">
+    <div className="space-y-2.5">
+      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">
         {label}
       </label>
 
@@ -15,18 +15,22 @@ export default function Input({
         className="
           flex items-center
           rounded-2xl
-          border border-slate-700
-          bg-slate-900/60
-          px-4 py-4
+          border border-white/10
+          bg-white/5
+          backdrop-blur-xl
+          px-4.5
+          h-[52px]
           transition-all
           duration-300
           focus-within:border-indigo-500
           focus-within:ring-2
           focus-within:ring-indigo-500/30
+          has-[:disabled]:opacity-50
+          has-[:disabled]:cursor-not-allowed
         "
       >
         {icon && (
-          <div className="mr-3 text-slate-400">
+          <div className="mr-3.5 text-indigo-400">
             {icon}
           </div>
         )}
@@ -36,14 +40,16 @@ export default function Input({
             w-full
             bg-transparent
             outline-none
-            placeholder:text-slate-500
+            text-sm
+            placeholder:text-slate-400
+            text-white
             ${className}
           `}
           {...props}
         />
 
         {rightIcon && (
-          <div className="ml-3 text-slate-400">
+          <div className="ml-3.5 text-slate-500">
             {rightIcon}
           </div>
         )}

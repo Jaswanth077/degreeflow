@@ -1,15 +1,15 @@
 const variants = {
   primary:
-    "bg-gradient-to-r from-indigo-500 to-violet-600 text-white hover:shadow-lg hover:shadow-indigo-500/30",
+    "bg-[var(--primary)] text-[#0B0B14] hover:bg-[var(--primary-hover)]",
 
   secondary:
-    "bg-slate-800 text-white hover:bg-slate-700",
+    "bg-white/5 text-white hover:bg-white/10 border border-white/10",
 
   outline:
-    "border border-slate-700 bg-transparent hover:bg-slate-800",
+    "border border-white/14 bg-transparent text-white hover:border-white/30",
 
   danger:
-    "bg-red-500 hover:bg-red-600 text-white",
+    "bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500 hover:text-white",
 };
 
 export default function Button({
@@ -20,20 +20,7 @@ export default function Button({
 }) {
   return (
     <button
-      className={`
-        w-full
-        flex items-center justify-center gap-2
-        rounded-2xl
-        px-6 py-3
-        font-semibold
-        transition-all duration-300
-        hover:scale-[1.02]
-        active:scale-95
-        disabled:cursor-not-allowed
-        disabled:opacity-60
-        ${variants[variant]}
-        ${className}
-      `}
+      className={`w-full h-[54px] flex items-center justify-center gap-2 rounded-[10px] px-6 font-semibold text-sm tracking-[0.01em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] disabled:cursor-not-allowed disabled:opacity-50 ${variants[variant]} ${className}`}
       {...props}
     >
       {children}

@@ -1,7 +1,5 @@
-.fade-up{
-
-    animation:fadeUp .6s ease;
-
+.animate-fade-up {
+  animation: fadeUp .6s ease;
 }
 
 @keyframes fadeUp{

@@ -1,24 +1,27 @@
 :root{
 
   /* Brand */
-  --primary:#6366F1;
-  --primary-hover:#4F46E5;
+  --primary:#7C5CFC;
+  --primary-hover:#9A8CFF;
+  --accent-warm:#FFB463;
 
-  /* Status */
-  --success:#22C55E;
-  --warning:#F59E0B;
+  /* Status (kept for any remaining badge/status use) */
+  --success:#7C5CFC;
+  --warning:#FFB463;
   --danger:#EF4444;
 
   /* Background */
-  --bg:#0F172A;
-  --surface:#1E293B;
-  --surface-light:#334155;
+  --bg:#0B0B14;
+  --bg-panel:#0E0E18;
+  --surface:#15151F;
+  --surface-light:#1C1C2A;
 
   /* Text */
-  --text:#F8FAFC;
-  --text-secondary:#94A3B8;
+  --text:#F5F3FF;
+  --text-muted:#9A93B8;
+  --text-faint:#6B6489;
 
   /* Radius */
-  --radius:20px;
+  --radius:14px;
 
 }

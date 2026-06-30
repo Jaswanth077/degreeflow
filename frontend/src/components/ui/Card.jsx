@@ -1,20 +1,6 @@
-export default function Card({
-  children,
-  className = "",
-}) {
+export default function Card({ children, className = "" }) {
   return (
-    <div
-      className={`
-        rounded-3xl
-        border border-white/10
-        bg-white/5
-        backdrop-blur-2xl
-        shadow-2xl
-        p-10
-        max-w-lg
-        ${className}
-      `}
-    >
+    <div className={`rounded-xl border border-white/10 bg-[var(--surface)] p-6 transition-all duration-300 ${className}`}>
       {children}
     </div>
   );

@@ -5,152 +5,188 @@
   "courses": [
     {
       "code": "UBA01",
-      "name": "Engineering Mathematics - I"
+      "name": "Engineering Mathematics - I",
+      "credits": 5
     },
     {
       "code": "UBA04",
-      "name": "Discrete Mathematics"
+      "name": "Discrete Mathematics",
+      "credits": 5
     },
     {
-        "code":"UBA53",
-        "name":"Probabilistic Methods and Linear Algebra"
+      "code": "UBA53",
+      "name": "Probabilistic Methods and Linear Algebra",
+      "credits": 5
     },
     {
-        "code":"UBA28",
-        "name":"Professional Ethics and Legal Practices"
+      "code": "UBA28",
+      "name": "Professional Ethics and Legal Practices",
+      "credits": 2
     },
     {
-        "code":"UBA48",
-        "name":"Engineering Physics"
+      "code": "UBA48",
+      "name": "Engineering Physics",
+      "credits": 5
     },
     {
-        "code":"UBA49",
-        "name":"Engineering Chemistry"
+      "code": "UBA49",
+      "name": "Engineering Chemistry",
+      "credits": 5
     },
     {
-        "code":"UBA29",
-        "name":"Technical English"
+      "code": "UBA29",
+      "name": "Technical English",
+      "credits": 3
     },
     {
-        "code":"UBA10",
-        "name":"Numerical Methods"
+      "code": "UBA10",
+      "name": "Numerical Methods",
+      "credits": 5
     },
-    
-{
-  "code": "UBA06",
-  "name": "Applied Mathematics"
-},
-{
-  "code": "BTA01",
-  "name": "Biology and Environmental Science for Engineers"
-},
-{
-  "code": "EEA01",
-  "name": "Basic Electrical and Electronics Engineering"
-},
-{
-  "code": "ECA47",
-  "name": "Principles of Digital System Design"
-},
-{
-  "code": "CSA02",
-  "name": "C Programming"
-},
-{
-  "code": "CSA03",
-  "name": "Data Structures"
-},
-{
-  "code": "CSA04",
-  "name": "Operating Systems"
-},
-{
-  "code": "CSA05",
-  "name": "Database Management Systems"
-},
-{
-  "code": "CSA07",
-  "name": "Computer Networks"
-},
-{
-  "code": "CSA08",
-  "name": "Python Programming"
-},
-{
-  "code": "CSA12",
-  "name": "Computer Architecture"
-},
-{
-  "code": "CSA15",
-  "name": "Cloud computing and Big Data Analytics"
-},
-{
-  "code": "CSA16",
-  "name": "Data warehousing and Data Mining"
-},
-{
-  "code": "CSA17",
-  "name": "Artificial Intelligence"
-},
-{
-  "code": "CSA06",
-  "name": "Design and Analysis of Algorithms"
-},
-{
-  "code": "CSA09",
-  "name": "Programming in Java"
-},
-{
-  "code": "CSA10",
-  "name": "Software Engineering"
-},
-{
-  "code": "ITA05",
-  "name": "Computer Vision"
-},
-{
-  "code": "CSA65",
-  "name": "Generative AI and Large-Scale Models"
-},
-{
-  "code": "DSA03",
-  "name": "Natural Language Processing"
-},
-{
-  "code": "DSA04",
-  "name": "Fundamentals of Data Science"
-},
-{
-  "code": "MLA03",
-  "name": "Reinforcement Learning"
-},
-{
-  "code": "DSA01",
-  "name": "Object Oriented Programming using C++"
-},
-{
-  "code": "ECA14",
-  "name": "Embedded Systems"
-},
-{
-  "code": "SPIC7",
-  "name": "Product Design and Development"
-},
-{
-  "code": "SPIC4",
-  "name": "Research Project"
-},
-{
-  "code": "SPIC5",
-  "name": "Industrial Internship - I"
-},
-{
-  "code": "SPIC6",
-  "name": "Industrial Internship - II"
-},
-{
-  "code": "SPIC9",
-  "name": "Professional Certification"
-}
+    {
+      "code": "UBA06",
+      "name": "Applied Mathematics",
+      "credits": 5
+    },
+    {
+      "code": "BTA01",
+      "name": "Biology and Environmental Science for Engineers",
+      "credits": 3
+    },
+    {
+      "code": "EEA01",
+      "name": "Basic Electrical and Electronics Engineering",
+      "credits": 5
+    },
+    {
+      "code": "ECA47",
+      "name": "Principles of Digital System Design",
+      "credits": 5
+    },
+    {
+      "code": "CSA02",
+      "name": "C Programming",
+      "credits": 5
+    },
+    {
+      "code": "CSA03",
+      "name": "Data Structures",
+      "credits": 5
+    },
+    {
+      "code": "CSA04",
+      "name": "Operating Systems",
+      "credits": 5
+    },
+    {
+      "code": "CSA05",
+      "name": "Database Management Systems",
+      "credits": 3
+    },
+    {
+      "code": "CSA07",
+      "name": "Computer Networks",
+      "credits": 5
+    },
+    {
+      "code": "CSA08",
+      "name": "Python Programming",
+      "credits": 5
+    },
+    {
+      "code": "CSA12",
+      "name": "Computer Architecture",
+      "credits": 4
+    },
+    {
+      "code": "CSA15",
+      "name": "Cloud computing and Big Data Analytics",
+      "credits": 5
+    },
+    {
+      "code": "CSA16",
+      "name": "Data warehousing and Data Mining",
+      "credits": 4
+    },
+    {
+      "code": "CSA17",
+      "name": "Artificial Intelligence",
+      "credits": 5
+    },
+    {
+      "code": "CSA06",
+      "name": "Design and Analysis of Algorithms",
+      "credits": 5
+    },
+    {
+      "code": "CSA09",
+      "name": "Programming in Java",
+      "credits": 5
+    },
+    {
+      "code": "CSA10",
+      "name": "Software Engineering",
+      "credits": 5
+    },
+    {
+      "code": "ITA05",
+      "name": "Computer Vision",
+      "credits": 4
+    },
+    {
+      "code": "CSA65",
+      "name": "Generative AI and Large-Scale Models",
+      "credits": 4
+    },
+    {
+      "code": "DSA03",
+      "name": "Natural Language Processing",
+      "credits": 4
+    },
+    {
+      "code": "DSA04",
+      "name": "Fundamentals of Data Science",
+      "credits": 4
+    },
+    {
+      "code": "MLA03",
+      "name": "Reinforcement Learning",
+      "credits": 4
+    },
+    {
+      "code": "DSA01",
+      "name": "Object Oriented Programming using C++",
+      "credits": 4
+    },
+    {
+      "code": "ECA14",
+      "name": "Embedded Systems",
+      "credits": 4
+    },
+    {
+      "code": "SPIC7",
+      "name": "Product Design and Development",
+      "credits": 4
+    },
+    {
+      "code": "SPIC4",
+      "name": "Research Project",
+      "credits": 6
+    },
+    {
+      "code": "SPIC5",
+      "name": "Industrial Internship - I",
+      "credits": 3
+    },
+    {
+      "code": "SPIC6",
+      "name": "Industrial Internship - II",
+      "credits": 3
+    },
+    {
+      "code": "SPIC9",
+      "name": "Professional Certification",
+      "credits": 2
+    }
   ]
 }

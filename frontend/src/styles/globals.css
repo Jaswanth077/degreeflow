@@ -26,3 +26,29 @@ body{
     overflow-x:hidden;
 
 }
+
+/* Typography utility classes */
+.serif {
+    font-family: 'Fraunces', serif;
+}
+
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Seal ring rotation */
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.seal-ring-text {
+    animation: spinSlow 40s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .seal-ring-text {
+        animation: none;
+    }
+}

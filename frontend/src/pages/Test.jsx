@@ -1,27 +1,34 @@
-import Logo from "../components/ui/Logo";
-import Button from "../components/ui/Button";
-import Card from "../components/ui/Card";
-import Input from "../components/ui/Input";
-import { User } from "lucide-react";
+import FeatureCard from "../components/ui/FeatureCard";
+import {
+  Brain,
+  BarChart3,
+  RefreshCcw,
+} from "lucide-react";
 
 export default function Test() {
   return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-10">
-      <Card className="w-full max-w-md space-y-6">
+    <div className="min-h-screen bg-slate-950 p-10">
+      <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
 
-        <Logo size="large" />
-
-        <Input
-          label="Register Number"
-          placeholder="Enter Register Number"
-          icon={<User size={18} />}
+        <FeatureCard
+          icon={<RefreshCcw size={24} />}
+          title="Live Portal Sync"
+          description="Automatically sync your latest academic records from the university portal."
         />
 
-        <Button>
-          Login
-        </Button>
+        <FeatureCard
+          icon={<Brain size={24} />}
+          title="AI Academic Insights"
+          description="Receive personalized recommendations based on your academic progress."
+        />
 
-      </Card>
+        <FeatureCard
+          icon={<BarChart3 size={24} />}
+          title="Degree Progress"
+          description="Understand exactly how far you've come and what's left to complete."
+        />
+
+      </div>
     </div>
   );
 }
