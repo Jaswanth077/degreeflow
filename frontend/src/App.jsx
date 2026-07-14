@@ -2,12 +2,19 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "react-hot-toast";
+import SplashScreen from "./components/common/SplashScreen";
 
 // Protected Route component
 function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, isInitializing } = useAuth();
+  
+  // If still loading session from localStorage, render the splash screen loader
+  if (isInitializing) {
+    return <SplashScreen />;
+  }
   
   // If not authenticated, redirect to login
   if (!isAuthenticated) {
@@ -19,7 +26,12 @@ function ProtectedRoute({ children }) {
 
 // Redirect Route for root /
 function RootRedirect() {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, isInitializing } = useAuth();
+  
+  if (isInitializing) {
+    return <SplashScreen />;
+  }
+  
   return isAuthenticated ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />;
 }
 
@@ -31,12 +43,25 @@ export default function App() {
           {/* Public Login Route */}
           <Route path="/login" element={<Login />} />
           
-          {/* Protected Dashboard Route */}
+          {/* Protected Dashboard Routes */}
+          {["/dashboard", "/courses", "/backlogs", "/advisor", "/analytics", "/settings"].map((path) => (
+            <Route
+              key={path}
+              path={path}
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+          ))}
+          
+          {/* Dedicated Results Route */}
           <Route
-            path="/dashboard"
+            path="/results"
             element={
               <ProtectedRoute>
-                <Dashboard />
+                <Results />
               </ProtectedRoute>
             }
           />

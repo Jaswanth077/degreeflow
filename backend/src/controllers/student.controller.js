@@ -1,5 +1,8 @@
 import PortalClient from "../utils/portalClient.js";
 import { getStudentProgress } from "../services/student.service.js";
+import {
+  normalizePortalResults,
+} from "../utils/portalNormalizer.js";
 
 export async function progress(req, res) {
   try {
@@ -16,9 +19,16 @@ export async function progress(req, res) {
 
     await portal.login(username, password);
 
-    const portalResults = await portal.getResults();
+    const rawResults =
+  await portal.getResults();
 
-    const progress = await getStudentProgress(portalResults);
+const portalResults =
+  normalizePortalResults(rawResults);
+
+    const progress = await getStudentProgress(
+  portalResults,
+  username
+);
 
     return res.status(200).json({
       success: true,

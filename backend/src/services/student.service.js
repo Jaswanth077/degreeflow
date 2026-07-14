@@ -1,8 +1,27 @@
-import { loadCurriculum } from "../utils/loadCurriculum.js";
-import { calculateProgress } from "./progress.service.js";
+/**
+ * Builds the student payload returned to the frontend.
+ *
+ * Currently:
+ * - Student name is a placeholder.
+ * - Stream and batch are defaults.
+ *
+ * Later these will be extracted directly
+ * from the college portal after login.
+ */
 
-export async function getStudentProgress(portalResults) {
-  const curriculum = loadCurriculum("cse_ai_2024");
+export async function getStudentProgress(
+  portalResults,
+  registerNumber
+) {
+  return {
+    student: {
+      name: "Student",
+      registerNumber,
 
-  return calculateProgress(curriculum, portalResults);
+      stream: "cse_ai",
+      batch: "2024",
+    },
+
+    portalResults,
+  };
 }
